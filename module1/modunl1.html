@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="1.css">
+    <title>nhanam</title>
+</head>
+<body >	
+    <div class="page ">
+        <div class="header">
+            <div class="topbar ">
+                <div class="wrapper">
+                    <div class="clearfix">
+                        <ul class="topnav">
+                            <li><a href="http://nhanam.com.vn/tin-tuc/5/gioi-thieu">Giới thiệu</a></li>
+                            <li><a href="http://nhanam.com.vn/lich-su-giao-dich">Lịch sử giao dịch</a></li>
+                            <li><a href="http://nhanam.com.vn/kiem-tra-don-hang">Kiểm tra đơn hàng</a></li>
+                        </ul>
+                        <ul class="topprofile">
+                                <li><a href="/dang-ky">Đăng ký</a></li>                                
+                                <li><a href="/dang-nhap">Đăng nhập</a></li>             
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrap">
+                <h1 class="logo"> <a href="/">NhaNam</a></h1>
+                <div class="cart" id="cart"> Giỏ hàng (<span id="cartcount">0</span>)      
+                </div>      
+                <div class="search">
+                    <form action="/tim-kiem" method="GET" novalidate="novalidate">
+                        <input type="text" name="q" placeholder="Tìm kiếm sách..." class="text">
+                        <input type="submit" value="Tìm kiếm" class="submit">
+                    </form>
+                </div>
+                <span class="openmenu-icon"></span>
+                <span class="opensearch-icon"></span>
+            </div>
+        </div>  
+        <div id="mainnav">
+            <div class="wrapper">       
+                <ul class="menu clearfix">
+                    <li>
+                        <a href="/sach-moi-xuat-ban">
+                            Danh mục sách
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/chuyen-muc/1/van-hoc-viet-nam">
+                                    Văn học Việt Nam
+                                </a>
+                        <ul class="submenu2">
+                            <li>
+                                <a href="/chuyen-muc/2/tieu-thuyet">
+                                    Tiểu thuyết
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/3/truyen-ngan">
+                                    Truyện ngắn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/4/tho-kich">
+                                    Thơ / Kịch
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/5/hoi-ky-phe-binh-tieu-luan">
+                                    Hồi ký / Phê Bình / Tiểu luận
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/6/tap-but-tan-van">
+                                    Tạp bút / Tản văn
+                                </a>
+                            </li>
+                     </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/7/van-hoc-nuoc-ngoai">
+                                Văn học Nước Ngoài
+                            </a>
+                        <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/8/duong-dai">
+                                        Đương đại
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/9/lang-man">
+                                        Lãng mạn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/10/trinh-tham-kinh-di">
+                                        Trinh thám / Kinh dị
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/11/kiem-hiep">
+                                        Kiếm hiệp
+                                    </a>
+                                </li>
+                                        <li>
+                                            <a href="/chuyen-muc/12/kinh-dien">
+                                                Kinh điển
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/13/tho-kich">
+                                                Thơ / Kịch
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/14/hoi-ky-tieu-luan">
+                                                Hồi ký / Tiểu luận
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/15/huyen-ao-gia-tuong">
+                                                Huyền ảo / Giả tưởng
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/16/tan-van-tap-but">
+                                                Tản văn / Tạp bút
+                                            </a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/17/thieu-nhi">
+                                Thiếu nhi
+                            </a>
+                                <ul class="submenu2">
+                                        <li>
+                                            <a href="/chuyen-muc/18/tuoi-teen">
+                                                Tuổi teen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/19/truyen-tranh">
+                                                Truyện tranh
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/chuyen-muc/20/thieu-nhi">
+                                                Thiếu nhi
+                                            </a>
+                                        </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/21/thoi-su---chinh-tri">
+                                        Thời sự - Chính trị
+                                    </a>
+                                        <ul class="submenu2">
+                                                <li>
+                                                    <a href="/chuyen-muc/22/hoi-ky-tu-truyen">
+                                                        Hồi ký / Tự truyện
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/chuyen-muc/23/the-gioi-hien-dai">
+                                                        Thế giới hiện đại
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                </li>
+                                <li>
+                                <a href="/chuyen-muc/25/khoa-hoc-tu-nhien---nhan-van">
+                                    Khoa học tự nhiên - Nhân văn
+                                </a>
+                                    <ul class="submenu2">
+                                            <li>
+                                                <a href="/chuyen-muc/26/lich-su">
+                                                    Lịch sử
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/chuyen-muc/27/triet-hoc">
+                                                    Triết học
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/chuyen-muc/28/tam-ly-hoc">
+                                                    Tâm lý học
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/chuyen-muc/29/kinh-te">
+                                                    Kinh tế
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/chuyen-muc/30/vu-tru">
+                                                    Vũ trụ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/chuyen-muc/31/sinh-hoc">
+                                                    Sinh học
+                                                </a>
+                                            </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/32/tham-khao">
+                                    Tham khảo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/43/giam-gia-dac-biet">
+                                    Giảm giá đặc biệt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/44/sach-tai-ban">
+                                    Sách tái bản
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/45/dat-truoc-sach">
+                                    Đặt trước sách
+                                </a>
+                            </li>   
+                    </ul>        
+                    </li>       
+                    <li>
+                        <a href="/chuyen-muc/42/sach-ban-chay">Sách bán chạy</a>
+                    </li>       
+                    <li>
+                        <a href="/tin-tuc/14/chuong-trinh-khuyen-mai">Chương trình khuyến mãi</a>
+                    </li>	
+                    		                                
+                </ul>
+        
+            </div>
+        
+        </div> 
+        <div class="container">
+            <div class="container1">
+                <h2></h2>  
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+              
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="Images/6HHNAJ7E.jpg" alt="Los Angeles" style="width:100%;">
+                    </div>
+              
+                    <div class="item">
+                      <img src="Images/3XSUDF44.jpg" alt="Chicago" style="width:100%;">
+                    </div>
+                  
+                    <div class="item">
+                      <img src="Images/OJ4M48Q3.jpg" alt="New york" style="width:100%;">
+                    </div>
+                  </div>
+              
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+           <div class="slider-wrapper theme-default">                      
+                <h1 class="pagetitle">
+                    <a href="/chuyen-muc/1/van-hoc-viet-nam">
+                        Văn học Việt Nam
+                    </a>
+                 </h1>          
+                <ul class="listbook clearfix">
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19158/sa-mon-khong-hai-thet-yen-bay-quy-dai-duong-t" class="image" title="Sa môn Không Hải thết yến bầy quỷ Đại Đường tập 1">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/1/7/SQHEFH86.jpg" alt="Sa môn Không Hải thết yến bầy quỷ Đại Đường tập 1">
+                                </a>                                
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19158/sa-mon-khong-hai-thet-yen-bay-quy-dai-duong-t" title="Sa môn Không Hải thết yến bầy quỷ Đại Đường tập 1">
+                                            Sa môn Không Hải thết yến bầy quỷ Đại Đường tập 1
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 368</li><li>Kích thước: 14 x 20.5cm</li><li>Ngày phát hành: 07-01-2020</li></ul></div>
+                                    <p class="price">
+                                        104.000đ
+                
+                                            <span class="old">130.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19158" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19158" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19136/cuoc-tron-chay-cua-josef-mengele" class="image" title="Cuộc trốn chạy của Josef Mengele">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/12/19/OU3NQ967.jpg" alt="Cuộc trốn chạy của Josef Mengele">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        80.000đ
+                
+                                            <span class="old">100.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19136/cuoc-tron-chay-cua-josef-mengele" title="Cuộc trốn chạy của Josef Mengele">
+                                            Cuộc trốn chạy của Josef Mengele
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 256</li><li>Kích thước: 14 x 20.5cm</li><li>Ngày phát hành: 31-12-2019</li></ul></div>
+                                    <p class="price">
+                                        80.000đ
+                
+                                            <span class="old">100.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19136" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19136" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19089/muon-lam-nu-hoang-dung-yeu-nhu-hau-gai" class="image" title="Muốn làm nữ hoàng, đừng yêu như hầu gái">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/11/14/2QAYBLJW.jpg" alt="Muốn làm nữ hoàng, đừng yêu như hầu gái">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        57.600đ
+                
+                                            <span class="old">72.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19089/muon-lam-nu-hoang-dung-yeu-nhu-hau-gai" title="Muốn làm nữ hoàng, đừng yêu như hầu gái">
+                                            Muốn làm nữ hoàng, đừng yêu như hầu gái
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 200</li><li>Kích thước: 14x20.5 cm</li><li>Ngày phát hành: 04-12-2019</li></ul></div>
+                                    <p class="price">
+                                        57.600đ
+                
+                                            <span class="old">72.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19089" data-state="1">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19089" data-state="1">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19086/ky-tuc-xa-phong-307" class="image" title="Ký túc xá phòng 307">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/11/14/C3F24YNQ.jpg" alt="Ký túc xá phòng 307">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        55.200đ
+                
+                                            <span class="old">69.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19086/ky-tuc-xa-phong-307" title="Ký túc xá phòng 307">
+                                            Ký túc xá phòng 307
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 176</li><li>Kích thước: 14x 20.5cm</li><li>Ngày phát hành: 29-11-2019</li></ul></div>
+                                    <p class="price">
+                                        55.200đ
+                
+                                            <span class="old">69.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19086" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19086" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19087/nguoi-dua-thu-tinh" class="image" title="Người đưa thư tình">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/11/20/YB9HLB6Z.jpg" alt="Người đưa thư tình">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        63.200đ
+                
+                                            <span class="old">79.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19087/nguoi-dua-thu-tinh" title="Người đưa thư tình">
+                                            Người đưa thư tình
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 188</li><li>Kích thước: 14x20.5 cm</li><li>Ngày phát hành: 29-11-2019</li></ul></div>
+                                    <p class="price">
+                                        63.200đ
+                
+                                            <span class="old">79.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19087" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19087" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19076/tham-kich-vi-nhan" class="image" title="Thảm kịch vĩ nhân">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/10/29/3GX3U5U3.jpg" alt="Thảm kịch vĩ nhân">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        93.600đ
+                
+                                            <span class="old">117.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19076/tham-kich-vi-nhan" title="Thảm kịch vĩ nhân">
+                                            Thảm kịch vĩ nhân
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 400</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 20-11-2019</li></ul></div>
+                                    <p class="price">
+                                        93.600đ
+                
+                                            <span class="old">117.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19076" data-state="1">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19076" data-state="1">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/17007/ve-nha-tb-2019" class="image" title="Về nhà (TB 2019)">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/6/21/C5FA2DHX.jpg" alt="Về nhà (TB 2019)">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        87.200đ
+                
+                                            <span class="old">109.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/17007/ve-nha-tb-2019" title="Về nhà (TB 2019)">
+                                            Về nhà (TB 2019)
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 399</li><li>Kích thước: 14 x 20,5 </li><li>Ngày phát hành: 19-07-2019</li></ul></div>
+                                    <p class="price">
+                                        87.200đ
+                
+                                            <span class="old">109.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="17007" data-state="1">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="17007" data-state="1">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/17979/ly-ruou-tran-gian" class="image" title="Ly rượu trần gian">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/7/8/SN8N3FX2.jpg" alt="Ly rượu trần gian">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        56.000đ
+                
+                                            <span class="old">70.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/17979/ly-ruou-tran-gian" title="Ly rượu trần gian">
+                                            Ly rượu trần gian
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 144</li><li>Kích thước: 15x24 cm</li><li>Ngày phát hành: 16-07-2019</li></ul></div>
+                                    <p class="price">
+                                        56.000đ
+                
+                                            <span class="old">70.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="17979" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="17979" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/17953/de-con-duoc-chich---hieu-het-ve-vac-xin-va-mi" class="image" title="Để con được chích - Hiểu hết về vắc xin và miễn dịch">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/6/28/1A4LDY89.jpg" alt="Để con được chích - Hiểu hết về vắc xin và miễn dịch">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        86.400đ
+                
+                                            <span class="old">108.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/17953/de-con-duoc-chich---hieu-het-ve-vac-xin-va-mi" title="Để con được chích - Hiểu hết về vắc xin và miễn dịch">
+                                            Để con được chích - Hiểu hết về vắc xin và miễn dịch
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 296</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 28-06-2019</li></ul></div>
+                                    <p class="price">
+                                        86.400đ
+                
+                                            <span class="old">108.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="17953" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="17953" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/16954/song-ngan-khi-to-khi-mo" class="image" title="Sông ngân khi tỏ khi mờ">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2019/5/22/KEJYZJBV.jpg" alt="Sông ngân khi tỏ khi mờ">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        61.600đ
+                
+                                            <span class="old">77.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/16954/song-ngan-khi-to-khi-mo" title="Sông ngân khi tỏ khi mờ">
+                                            Sông ngân khi tỏ khi mờ
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 184</li><li>Kích thước: 14 x 20.5cm</li><li>Ngày phát hành: 31-05-2019</li></ul></div>
+                                    <p class="price">
+                                        61.600đ
+                
+                                            <span class="old">77.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="16954" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="16954" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                
+                </ul>
+                <h1 class="pagetitle">
+                    <a href="/chuyen-muc/7/van-hoc-nuoc-ngoai">
+                         Văn học Nước Ngoài
+                    </a>
+                </h1>
+                <ul class="listbook clearfix">
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/23439/cuoc-doi-la-mot-tieu-thuyet" class="image" title="Cuộc đời là một tiểu thuyết">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/1/12/PLXV6NFL.jpg" alt="Cuộc đời là một tiểu thuyết">
+                                </a>
+                                
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/23439/cuoc-doi-la-mot-tieu-thuyet" title="Cuộc đời là một tiểu thuyết">
+                                            Cuộc đời là một tiểu thuyết
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 268</li><li>Kích thước: 14x20.5 cm</li><li>Ngày phát hành: 12-01-2021</li></ul></div>
+                                    <p class="price">
+                                        112.000đ
+                
+                                            <span class="old">140.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="23439" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="23439" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/22417/chin-mang" class="image" title="Chín mạng">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/12/7/ZYJO4UDP.jpg" alt="Chín mạng">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        78.400đ
+                
+                                            <span class="old">98.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/22417/chin-mang" title="Chín mạng">
+                                            Chín mạng
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 280</li><li>Kích thước: 14 x 20.5cm</li><li>Ngày phát hành: 21-12-2020</li></ul></div>
+                                    <p class="price">
+                                        78.400đ
+                
+                                            <span class="old">98.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="22417" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="22417" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/22416/trong-khi-cho-doi-godot" class="image" title="Trong khi chờ đợi Godot ">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/12/7/ERA1QXWE.jpg" alt="Trong khi chờ đợi Godot ">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        79.200đ
+                
+                                            <span class="old">99.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/22416/trong-khi-cho-doi-godot" title="Trong khi chờ đợi Godot ">
+                                            Trong khi chờ đợi Godot 
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 164</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 12-12-2020</li></ul></div>
+                                    <p class="price">
+                                        79.200đ
+                
+                                            <span class="old">99.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="22416" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="22416" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/21411/hoa-van-no-moi-ngay" class="image" title="Hoa vẫn nở mỗi ngày">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/11/3/72C7S812.jpg" alt="Hoa vẫn nở mỗi ngày">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        187.200đ
+                
+                                            <span class="old">234.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/21411/hoa-van-no-moi-ngay" title="Hoa vẫn nở mỗi ngày">
+                                            Hoa vẫn nở mỗi ngày
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 532</li><li>Kích thước: 15.5 x 24cm</li><li>Ngày phát hành: 13-11-2020</li></ul></div>
+                                    <p class="price">
+                                        187.200đ
+                
+                                            <span class="old">234.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="21411" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="21411" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/20408/chuc-me-ngu-ngon" class="image" title="Chúc mẹ ngủ ngon">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/10/27/H2PQB7LZ.jpg" alt="Chúc mẹ ngủ ngon">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        116.000đ
+                
+                                            <span class="old">145.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/20408/chuc-me-ngu-ngon" title="Chúc mẹ ngủ ngon">
+                                            Chúc mẹ ngủ ngon
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 396</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 10-11-2020</li></ul></div>
+                                    <p class="price">
+                                        116.000đ
+                
+                                            <span class="old">145.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="20408" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="20408" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19396/trai-tim-cua-brutus" class="image" title="Trái tim của Brutus">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/8/31/ZVBYI4J8.jpg" alt="Trái tim của Brutus">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        110.400đ
+                
+                                            <span class="old">138.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19396/trai-tim-cua-brutus" title="Trái tim của Brutus">
+                                            Trái tim của Brutus
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 348</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 11-09-2020</li></ul></div>
+                                    <p class="price">
+                                        110.400đ
+                
+                                            <span class="old">138.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19396" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19396" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19358/canh-ngo" class="image" title="Cảnh ngộ">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/7/15/AWWIEYUW.jpg" alt="Cảnh ngộ">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        94.400đ
+                
+                                            <span class="old">118.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19358/canh-ngo" title="Cảnh ngộ">
+                                            Cảnh ngộ
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 284</li><li>Kích thước: 14 x 20.5 cm</li><li>Ngày phát hành: 26-07-2020</li></ul></div>
+                                    <p class="price">
+                                        94.400đ
+                
+                                            <span class="old">118.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19358" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19358" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19342/nha-dau-tu-thong-minh-tb-199000" class="image" title="Nhà đầu tư thông minh ( TB 199.000)">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/7/2/TZFQ255S.jpg" alt="Nhà đầu tư thông minh ( TB 199.000)">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        159.200đ
+                
+                                            <span class="old">199.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19342/nha-dau-tu-thong-minh-tb-199000" title="Nhà đầu tư thông minh ( TB 199.000)">
+                                            Nhà đầu tư thông minh ( TB 199.000)
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 644</li><li>Kích thước: 15,5 x 24 cm</li><li>Ngày phát hành: 10-07-2020</li></ul></div>
+                                    <p class="price">
+                                        159.200đ
+                
+                                            <span class="old">199.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19342" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19342" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19330/but-ky-nguoi-di-san" class="image" title="Bút ký người đi săn">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/6/16/UHPYJK3I.jpg" alt="Bút ký người đi săn">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        127.200đ
+                
+                                            <span class="old">159.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19330/but-ky-nguoi-di-san" title="Bút ký người đi săn">
+                                            Bút ký người đi săn
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 452</li><li>Kích thước: 15.5 x 24cm</li><li>Ngày phát hành: 22-06-2020</li></ul></div>
+                                    <p class="price">
+                                        127.200đ
+                
+                                            <span class="old">159.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19330" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19330" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="book  bookimage0">
+                            <div class="wrap">
+                                <a href="/sach/19328/tro-choi-cua-thien-than" class="image" title="Trò chơi của thiên thần">
+                                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2020/6/16/K9YFCUJ4.jpg" alt="Trò chơi của thiên thần">
+                
+                
+                                </a>
+                                    <!-- <p class="price">
+                                        172.000đ
+                
+                                            <span class="old">215.000đ</span>
+                                    </p> -->
+                                <div class="popup">
+                                    <h1 class="name">
+                                        <a href="/sach/19328/tro-choi-cua-thien-than" title="Trò chơi của thiên thần">
+                                            Trò chơi của thiên thần
+                                        </a>
+                                    </h1>
+                                    <div class="description"><ul><li>Số trang: 592</li><li>Kích thước: 15.5 x 24cm</li><li>Ngày phát hành: 21-06-2020</li></ul></div>
+                                    <p class="price">
+                                        172.000đ
+                
+                                            <span class="old">215.000đ</span>
+                                    </p>
+                                        <a href="javascript:;" class="addtocart" data-id="19328" data-state="0">Thêm vào giỏ hàng</a>
+                                        <a href="javascript:;" class="buynow" data-id="19328" data-state="0">Mua ngay</a>
+                                
+                                </div>
+                            </div>
+                        </li>
+                
+                </ul>                            
+            </div>
+        </div> 
+        <div class="footer">
+            <div class="wrapper">
+
+    <div class="footermenu clearfix">
+        <div class="col">
+
+            <ul>
+                <li><a href="/tin-tuc/5/gioi-thieu">Giới thiệu</a></li>
+                <li><a href="/tin-tuc/9/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                <li><a href="/tin-tuc/10/chinh-sach-van-chuyen">Chính sách vận chuyển</a></li>
+                <li><a href="/tin-tuc/12/hinh-thuc-thanh-toan"> Hình thức thanh toán</a></li>
+                
+            </ul>
+        </div>
+        <div class="col">
+
+            <ul>
+                <li><a href="/tin-tuc/11/quy-dinh-doi-tra-huy-don-hang">Quy định đổi, trả và huỷ đơn hàng</a></li>
+                <li><a href="/tin-tuc/7/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></li>
+                <li><a href="/tin-tuc/8/lien-he">Liên hệ</a></li>
+                
+                <li><a href="/tin-tuc/19/thong-bao">Thông báo</a></li>
+            </ul>
+        </div>
+
+
+        <div class="socialbtn">
+            <a class="facebook" href="https://www.facebook.com/nhanampublishing">
+               Facebook
+            </a>
+            
+        </div>
+    </div>
+
+
+</div>
+
+<div class="copyright">
+
+    <div class="wrapper">
+        © 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền Thông Nhã Nam - <a href="/" style="color:#fff">nhanam.com.vn</a> <br>
+        Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà Nội
+        <br>
+        Giấy ĐKKD số 0101603420 do Sở KH&amp;ĐT TP Hà Nội cấp ngày 21 tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013
+    </div>
+
+
+
+</div>
+
+
+        </div>   
+    <script src="/bundles/jquery?v=GG-4HyEmsS9lf7nSJLxMi0faVbJq7oLB9CRxhCA85Lw1"></script>
+    <script src="/bundles/jqueryval?v=dIxkPTGjHelWlu_QFt2d2XI2038hTpVy3tEgsiHm_2M1"></script>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious"></button><button id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><iframe src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE" style="display: none;"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body>
+
+</html>

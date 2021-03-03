@@ -1,0 +1,397 @@
+*{ 
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #333;
+    font: 12px "Arial", Arial, Helvetica, sans-serif;
+    background: url("images/bg_pattern.jpg")
+}
+
+a {
+    text-decoration: none
+}
+
+ul,
+li {
+    list-style: none
+}
+
+.page {}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto
+}
+
+.slider-wrapper {
+    width: 1000px;
+    margin: 0 auto
+}
+
+.header {
+    background: url("Images/headerbg.png") repeat-x scroll 50% 0 rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 150px
+}
+
+.header .wrap {
+    position: relative;
+    height: 150px;
+    width: 1000px
+}
+
+.header .topbar {
+    height: 22px;
+    background: rgba(216, 216, 216, .6);
+    line-height: 22px;
+    text-transform: uppercase
+}
+
+.header .topbar a {
+    color: #016600;
+    font-size: 11px
+}
+
+.header .topbar a:hover {
+    text-decoration: underline
+}
+
+.header .topnav {
+    float: left;
+    width: 400px
+}
+
+.header .topnav>li {
+    display: inline;
+    position: relative
+}
+
+.header .topnav>li a:before {
+    content: "|";
+    padding: 0 15px
+}
+
+.header .topnav>li:first-child a:before {
+    content: "";
+    padding: 0
+}
+
+.header .topprofile {
+    float: right
+}
+
+.header .topprofile>li {
+    display: inline-block
+}
+
+.header .topprofile>li a {
+    color: #016600
+}
+
+.header .topprofile>li a:before {
+    content: "|";
+    padding: 0 15px
+}
+
+.header .topprofile>li:first-child a:before {
+    content: "";
+    padding: 0
+}
+
+.header .topprofile>li:last-child a {}
+.header .cart {
+    background: url("Images/cart.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    color: #000;
+    height: 55px;
+    position: absolute;
+    right: 0;
+    text-indent: -500em;
+    text-transform: uppercase;
+    top: 20px;
+    width: 55px;
+    cursor: pointer
+}
+.header .search {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 320px
+}
+.header .search .text {
+    background: none repeat scroll 0 0 #fff;
+    border: medium none;
+    color: #333;
+    float: left;
+    margin: 6px 0 0 8px;
+    padding: 2px;
+    width: 300px
+}
+.header .search .text::-webkit-input-placeholder {
+    color: #016600;
+    font-style: italic
+}
+.header .search .text:-moz-placeholder {
+    color: #016600;
+    font-style: italic
+}
+.header .search .text::-moz-placeholder {
+    color: #016600;
+    font-style: italic
+}
+.header .search .text:-ms-input-placeholder {
+    color: #016600;
+    font-style: italic
+}
+.header .search .submit {
+    background: url("Images/searchbg.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: medium none;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: -500em;
+    width: 30px
+}
+.header .slogan {
+    background: url("Images/logo.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    height: 45px;
+    left: 125px;
+    position: absolute;
+    text-indent: -500em;
+    top: 80px;
+    width: 300px
+}
+.header .logo {
+    display: block;
+    height: 90px;
+    left: -1px;
+    position: absolute;
+    top: 30px;
+    width: 514px
+}
+.header .logo a {
+    background: url("Images/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 90px;
+    text-indent: -500em;
+    width: 514px
+}
+#mainnav {
+    background: url("Images/menubg.png");
+}
+#mainnav .menu {
+    text-align: justify;
+    height: 40px;
+    line-height: 40px
+}
+#mainnav .menu>li {
+    position: relative;
+    width: 250px;
+    float: left
+}
+#mainnav .menu>li>a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px
+}
+#mainnav .menu>li:hover>a {
+    background: #033801
+}
+#mainnav .menu>li:hover .submenu {
+    display: block
+}
+#mainnav .submenu {
+    background: url("Images/menubg.png");
+    box-shadow: 2px 4px 3px rgba(0, 0, 0, .6);
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    z-index: 9999;
+    width: 250px
+}
+#mainnav .submenu>li {
+    position: relative
+}
+#mainnav .submenu>li>a {
+    background: none repeat scroll 0 0 #033801;
+    color: #fff;
+    display: block;
+    line-height: 28px;
+    margin-top: 1px;
+    padding: 0 20px;
+    text-transform: uppercase
+}
+#mainnav .submenu>li:hover>a {
+    background: rgba(0, 0, 0, 0)
+}
+.mainnav .submenu>li:hover .submenu2 {
+    display: block
+}
+#mainnav .submenu2 {
+    background: url("Images/menubg.png");
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .6);
+    display: none;
+    left: 200px;
+    position: absolute;
+    top: -1px;
+    z-index: 9999;
+    width: 250px
+}
+#mainnav .submenu2>li>a {
+    background: none repeat scroll 0 0 #033801;
+    color: #fff;
+    display: block;
+    line-height: 28px;
+    margin-top: 1px;
+    padding: 0 10px;
+    text-transform: uppercase
+}
+
+.container.wrapper {
+    padding-top: 80px
+}
+.sidebar {
+    float: left;
+    margin: 0 0 20px;
+    width: 220px
+}
+.main {
+    background: none repeat scroll 0 0 #fff;
+    float: left;
+    margin: 0 0 40px 20px;
+    min-height: 237px;
+    padding: 0 30px 30px;
+    width: 640px;
+    position: relative
+}
+.listbook {
+    margin: 10px auto 0;
+    padding: 0 50px;
+    width: 900px
+}
+.book {
+    float: left;
+    margin: 0 10px;
+    padding: 5px 0 71px;
+    position: relative;
+    height: 232px
+}
+.book .image img {
+    height: 226px
+}
+.book .popup {   
+    display: none;
+    height: 250px;
+    left: 15px;
+    padding: 5px 20px;
+    position: absolute;
+    top: 157px;
+    width: 200px;
+    z-index: 1000
+}
+.pagetitle a {
+    background: url(Images/lbcenter.png) no-repeat scroll center top rgba(0,0,0,0);
+    color: #fff;
+    display: inline-block;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-weight: normal;
+    padding: 28px 10px 35px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgb(116 117 118 / 50%);
+    text-transform: uppercase;
+}
+.footer {
+    background: url("Images/headerbg.png") repeat-x scroll 50% 0 rgba(0, 0, 0, 0);
+    border-top: 8px solid rgba(216, 216, 216, .6)
+}
+.footer .copyright {
+    text-align: center;
+    border-top: 4px solid rgba(216, 216, 216, .8);
+    color: #fff;
+    background: url("Images/menubg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    line-height: 20px;
+    padding-bottom: 5px
+}
+.footermenu {
+    height: 200px
+}
+
+.footermenu .col {
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px;
+    width: 280px
+}
+.footermenu .col li {
+    background: url("Images/arricon.png") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #c2c2c2;
+    padding: 10px 0 10px 30px
+}
+.footermenu .col li a {
+    color: #0f5731;
+    font-size: 16px;
+    text-decoration: none
+}
+.footermenu .socialbtn {
+    float: right;
+    padding: 48px 0 0
+}
+.footermenu .socialbtn a {
+    display: inline-block;
+    margin-right: 10px;
+    background: url(../images/shareicons2.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    text-indent: -500em
+}
+.footermenu .socialbtn a.rss {
+    background-position: -58px 0
+}
+.footermenu .socialbtn a.behance {
+    background-position: -237px 0
+}
+.checkorder td,
+.checkorder th {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center
+}
+.checkorder table a {
+    color: #333;
+    font-weight: bold
+}
+.checkorder .message {
+    color: red;
+    font-weight: bold
+}
+.pagetitle {
+    color: #000;
+    margin: 25px auto 30px;
+    padding: 0;
+    text-align: center;
+    width: 888px
+}
+.pagetitle a {
+    background: url("Images/lbcenter.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    color: #fff;
+    display: inline-block;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-weight: normal;
+    padding: 28px 10px 35px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(116, 117, 118, .5);
+    text-transform: uppercase
+}
+
