@@ -6,6 +6,7 @@ public abstract class SanPham {
     private String thuocDM;
     public abstract void hienthithongtin();
     public abstract double phantramgiamgia(String loaikh);
+    public abstract void luuvaofile();
     public abstract void Them();
     public SanPham(String maSp, String tenSp, int soluong, double dongia, String thuocDM) {
         this.maSp = maSp;

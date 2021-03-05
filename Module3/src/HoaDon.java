@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.PrimitiveIterator;
+import java.util.Scanner;
 
 public class HoaDon {
     private String mahd;
@@ -9,6 +10,10 @@ public class HoaDon {
     private Date ngaymua;
     private double dongia;
     private double tongtien;
+
+     public HoaDon()
+         Scanner sc = new Scanner(System.in);
+     }
 
     public HoaDon(String mahd, String makh, String masp, int soluong, Date ngaymua, double dongia, double tongtien) {
         this.mahd = mahd;
@@ -21,6 +26,7 @@ public class HoaDon {
     }
 
     public HoaDon() {
+
     }
 
     public String getMahd() {
@@ -77,5 +83,67 @@ public class HoaDon {
 
     public void setTongtien(double tongtien) {
         this.tongtien = tongtien;
+    }
+    public void hienThiThongTin(){
+        System.out.println("---------Hien thi thong tin hoa don--------");
+        System.out.println(this.toString());
+    }
+
+    public HoaDon themMoiHoaDon(){
+        System.out.println("---------Them hoa don-----------");
+        System.out.println("Ma hoa don: ");
+        String maHoaDon = scanner.nextLine();
+        System.out.println("Ma khach hang: ");
+        String maKhachHang = scanner.nextLine();
+        System.out.println("Ma san pham: ");
+        String maSanPham = scanner.nextLine();
+        System.out.println("So luong");
+        int soLuong = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ngay mua: ");
+        Date ngayMua = new Date();
+        try {
+            ngayMua = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.nextLine());
+        } catch (Exception e){
+
+        }
+        System.out.println("Don gia: ");
+        float donGia = scanner.nextFloat();
+        HoaDon hoaDon = new HoaDon(maHoaDon,maKhachHang,maSanPham,soLuong,ngayMua,donGia);
+        return hoaDon;
+    }
+
+    @Override
+    public String toString() {
+        return "HoaDon{" +
+                "maHoaDon='" + maHoaDon + '\'' +
+                ", maKhachHang='" + maKhachHang + '\'' +
+                ", maSanPham='" + maSanPham + '\'' +
+                ", soLuong='" + soLuong + '\'' +
+                ", ngayMua=" + ngayMua +
+                ", donGia=" + donGia +
+                ", tongTien=" + tongTien +
+                '}';
+    }
+
+    public void luuVaoFile(){
+        String tenFile = "src\\file\\HoaDon.svc";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file HoaDon.csv------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Sach vào file HoaDon.csv-------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
     }
 }

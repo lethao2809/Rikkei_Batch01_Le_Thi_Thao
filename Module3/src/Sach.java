@@ -137,5 +137,25 @@ public class Sach extends SanPham {
 //
 //        }
     }
+    public void luuVaoFile(){
+        String tenFile = "src\\file\\Sach.svc";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file Sach.csv------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Sach vào file Sach.csv-------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
+    }
 
 }

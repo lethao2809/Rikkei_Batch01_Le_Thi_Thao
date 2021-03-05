@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Date;
 
 public class KhachHang {
@@ -57,4 +59,23 @@ public class KhachHang {
     public void setLoaikh(String loaikh) {
         this.loaikh = loaikh;
     }
+    public void luuVaoFile(){
+        String tenFile = "src\\file\\KhachHang.svc";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file KhachHang vào KhachHang.csv------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Sach vào file KhachHang.csv-------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
 }
